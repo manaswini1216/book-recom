@@ -3,14 +3,19 @@ import pickle
 import numpy as np
 
 # Load precomputed data once at startup
-with open('popular.pkl', 'rb') as f:
-    popular_df = pickle.load(f)
-with open('pt.pkl', 'rb') as f:
-    pt = pickle.load(f)
-with open('books.pkl', 'rb') as f:
-    books = pickle.load(f)
-with open('similarity_scores.pkl', 'rb') as f:
-    similarity_scores = pickle.load(f)
+# with open('popular.pkl', 'rb') as f:
+#     popular_df = pickle.load(f)
+# with open('pt.pkl', 'rb') as f:
+#     pt = pickle.load(f)
+# with open('books.pkl', 'rb') as f:
+#     books = pickle.load(f)
+# with open('similarity_scores.pkl', 'rb') as f:
+#     similarity_scores = pickle.load(f)
+
+popular_df = pd.read_pickle('popular.pkl')
+pt = pd.read_pickle('pt.pkl')
+books = pd.read_pickle('books.pkl')
+similarity_scores = pd.read_pickle('similarity_scores.pkl')
 
 app = Flask(__name__)
 
