@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import pickle
 import numpy as np
+import pandas as pd
 
 # Load precomputed data once at startup
 # with open('popular.pkl', 'rb') as f:
